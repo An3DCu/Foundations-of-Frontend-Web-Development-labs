@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form4</title>
+</head>
+<body>
+    <h1>CV Data Entry Form</h1>
+    <form action="/submit" method="post">
+        <fieldset>
+            <legend>Personal Information</legend>
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name"><br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email"><br><br>
+
+            <label for="location">Location:</label>
+            <input type="text" id="location" name="location"><br><br>
+
+            <label for="profile-picture">Upload Profile Picture:</label>
+            <input type="file" id="profile-picture" name="profile-picture" accept=".png, .jpg, .jpeg"><br><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Introduction</legend>
+            <label for="introduction">Write a short introduction about yourself:</label><br>
+            <textarea id="introduction" name="introduction" rows="8" cols="90"></textarea><br><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Skills</legend>
+            <label><input type="checkbox" name="skills" value="html"> HTML</label><br>
+            <label><input type="checkbox" name="skills" value="css"> CSS</label><br>
+            <label><input type="checkbox" name="skills" value="javascript"> JavaScript</label><br>
+            <label><input type="checkbox" name="skills" value="react"> React</label><br>
+            <label><input type="checkbox" name="skills" value="nodejs"> Node.js</label><br>
+            <label><input type="checkbox" name="skills" value="express"> Express</label><br>
+            <label><input type="checkbox" name="skills" value="git"> Git</label><br>
+            <label><input type="checkbox" name="skills" value="web-performance"> Web Performance Optimization</label><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Experience</legend>
+            <label for="position">Current Position:</label>
+            <input type="text" id="position" name="position"><br><br>
+
+            <label for="experience">Describe your experience:</label><br>
+            <textarea id="experience" name="experience" rows="8" cols="90"></textarea><br><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Education & Certifications</legend>
+            <label for="degree">Degree:</label>
+            <select id="degree" name="degree">
+                <option value="highschool">High School</option>
+                <option value="bachelor">Bachelor's</option>
+                <option value="master">Master's</option>
+                <option value="phd">PhD</option>
+            </select><br><br>
+
+            <label for="certifications">Certifications:</label><br>
+            <textarea id="certifications" name="certifications" rows="5" cols="50"></textarea><br><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Personal Projects</legend>
+            <label for="projects">Describe your personal projects:</label><br>
+            <textarea id="projects" name="projects" rows="5" cols="50"></textarea><br><br>
+        </fieldset>
+
+        <input type="submit" value="Submit CV">
+    </form>
+</body>
+</html>
