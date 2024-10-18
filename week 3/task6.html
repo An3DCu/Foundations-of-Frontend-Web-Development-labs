@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form6</title>
+</head>
+<body>
+    <h1>Subscription Management Form</h1>
+    <hr>
+    <form action="/submit" method="POST">
+        <fieldset>
+            <legend>Details</legend>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email"><br><br>
+
+            <label for="link">Link:</label>
+            <input type="url" id="link" name="link"><br><br>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password"><br><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Reasons for Ending Subscription</legend>
+            <label for="reason">Select Reason:</label>
+            <select id="reason" name="reason">
+                <option value="bad-quality">Bad quality</option>
+                <option value="small-size">Small Size</option>
+                <option value="other" selected>Other</option>
+            </select><br><br>
+
+            <p><i>Would you use one of our other tools again?</i></p>
+            <input type="radio" id="yes" name="reuse" value="yes" checked>
+            <label for="yes">Yes</label><br>
+            <input type="radio" id="no" name="reuse" value="no">
+            <label for="no">No</label><br>
+            <input type="radio" id="maybe" name="reuse" value="maybe">
+            <label for="maybe">Maybe</label><br><br>
+
+            <label for="comments">Additional Comments:</label><br>
+            <textarea id="comments" name="comments" rows="6" cols="80" placeholder="Your comments..."></textarea><br><br>
+        </fieldset>
+
+        <button type="submit"><img src="submit button.png" width="150px" height="90px"></button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form5</title>
+</head>
+<body>
+    <h1>IT Center Ticket Form</h1>
+    <hr>
+    <form action="/submit" method="post">
+        <label for="problem-type">Type of Problem:</label>
+        <select id="problem-type" name="problem-type">
+            <option value="cv-creator">CV Creator Tool</option>
+            <option value="data-privacy">Data Privacy Concerns</option>
+            <option value="help-guidance" selected>Help & Guidance</option>
+            <option value="file-upload">File upload issues</option>
+        </select><br><br>
+
+        <label>Select Urgency:</label><br>
+        <input type="radio" id="not-urgent" name="urgency" value="not-urgent">
+        <label for="not-urgent">Not urgent</label><br>
+        <input type="radio" id="mild" name="urgency" value="mild" checked>
+        <label for="mild">Mild</label><br>
+        <input type="radio" id="highly-urgent" name="urgency" value="highly-urgent">
+        <label for="highly-urgent">Highly Urgent</label><br><br>
+
+        <label for="file-upload">Upload a Picture (JPG, JPEG, PNG):</label>
+        <input type="file" id="file-upload" name="file-upload" accept=".jpg, .jpeg, .png" required><br><br>
+
+        <input type="submit" value="Submit Ticket">
+    </form>
+</body>
+</html>
