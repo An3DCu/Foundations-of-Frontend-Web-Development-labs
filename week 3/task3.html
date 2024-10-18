@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form3</title>
+</head>
+<h1>CV Creator Tool Feedback Form</h1>
+<hr>
+<body>
+      <form action="/submit" method="POST">
+        <label for="uore">Email:</label>
+        <input type="text" id="uore" name="email"><br><br>
+        <label for="pass">Password:</label> 
+        <input type="password" id="pass" name="password"><br><br>
+        <label for="tex"><i>Your Feedback:</i></label><br>
+        <textarea id="tex" name="message" rows="10" cols="30">
+            </textarea> <br>
+        
+        <label for="hear"><u>How did you hear about our CV Creation Tool? </u></label>
+        <select name="hear" id="hear">
+          <option value="Linkedin" selected="selected">Linkedin</option>
+          <option value="Instagram">Instagram</option>
+          <option value="Facebook">Facebook</option>
+          <option value="Tiktok">Tiktok</option>
+          <option value="Other">Other</option>
+        </select> <br><br>
+        <input type="checkbox" id="newsletter" name="newsletter" value="interest">
+        <label for="newsletter">Sign up for the newsletter</label><br><br>
+        
+        <label><i>Would you use this CV Creator Tool again?</i></label><br>
+        <input type="radio" id="yes" name="usage" value="Yes" checked>
+        <label for="yes">Yes</label><br>
+        <input type="radio" id="no" name="usage" value="No">
+        <label for="no">No</label><br>
+        <input type="radio" id="maybe" name="usage" value="Maybe">
+        <label for="maybe">Maybe</label><br><br>
+        <input type="submit" name="submit" value="Submit Feedback"> 
+      </form>
+</body>
+
+</html>

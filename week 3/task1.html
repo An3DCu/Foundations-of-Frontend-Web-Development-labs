@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<h1>Registration Form</h1>
+<hr>
+<body>
+    <form action="/submit" method="post">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name"><br>
+        <label for="uname">Username:</label><br>
+        <input type="text" id="uname" name="uname"><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email"><br>
+        <label for="pass">Password:</label><br>
+        <input type="password" id="pass" name="pass"><br>
+        <label for="age">Age:</label><br>
+        <input type="number" min="0" id="age" name="age"><br>
+        <label for="phone">Phone Number:</label><br>
+        <input type="tel" id="phone" name="phone"><br> <br>
+        <label for="gender">Gender:</label>
+
+        <select name="gender" id="gender">
+          <option value="female">Female</option>
+          <option value="male">Male</option>
+        </select> <br><br>
+        <input type="submit" name="submit" value="Register"> 
+
+      </form> 
+</body>
+
+</html>
