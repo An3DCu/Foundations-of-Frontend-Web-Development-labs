@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form2</title>
+</head>
+<h1>Login Form</h1>
+<hr>
+<body>
+    <p>Please select your login method:</p>
+    <form action="/submit" method="POST">
+        <input type="radio" id="username" name="Userinfo" value="Username">
+        <label for="username">Username</label><br>
+        <input type="radio" id="email" name="Userinfo" value="Email"  checked="checked">
+        <label for="email">Email</label><br><br>
+        <label for="uore">Username or Email:</label>
+        <input type="text" id="uore" name="uore"><br><br>
+        <label for="pass">Password:</label> 
+        <input type="password" id="pass" name="pass"><br><br>
+        <input type="submit" name="Submit" value="Login"> 
+      </form>
+</body>
+
+</html>
