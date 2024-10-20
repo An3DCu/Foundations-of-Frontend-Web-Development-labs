@@ -1,2 +1,2 @@
 # Foundations-of-Frontend-Web-Development-labs
-'Hello everyone'
+'Weekly labwork and assignments for the course Foundations of Frontend Web Development.'
