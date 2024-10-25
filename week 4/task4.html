@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>table, th, td {
+        border: 1px solid black;
+      }</style>
+<title> CV </title>
+</head>
+<body>
+
+<h1>John Smith</h1>
+<img src="RA.jpg" alt="Bean" style="width:200px;height:200px;">
+<hr>
+<h2>Introduction</h2>
+<p> Hello! My name is <b>John Smith,</b> and I am an <i>aspiring</i> Web developer with <mark><b>0 years</b></mark> of experiance in building modern web applications.
+</p>
+<p>I have a minimal background in anything notabale to this industry. But I'll fix it soon enough.</p>
+<hr>
+<h3>Skills</h3>
+<p>Skills:</p>
+<ul>
+	<li>HTML, CSS, Java</li>
+	<li>React, Something, Lies</li>
+	<li>Git, Github</li>
+</ul>
+
+<hr>
+<h3>Experiance</h3>
+<ul style="list-style-type: square;">
+	<li><b>Web Developer</b> at Lie Ltd.</li>
+	<li><b>Frontend Dev</b> at Imaginary.inc</li>
+	<li><b>Made up job</b> at something</li>
+</ul>
+
+<hr>
+<h3>Education and Certifications</h3>
+<ol type="I">
+	<li>2nd Gymnasium in <i>Redacted</i></li>
+	<li>International Burch University</li>
+	<li>Faculty of Natural Sciences in Sarajevo</li>
+</ol>
+
+<hr>
+<h3>Personal Projects</h3>
+<p>Some of my personal projects include <i>this one</i>, as well as <b>that one!</b> Showcasing my lack of projects in <u>fullstack development.</u>
+</p>
+<a href="https://github.com/An3DCu"> Visit my Github profile for a larger lack of projects! </a>
+<hr>
+<h3>Personal Information</h3>
+<dl>
+	<dt>Full Name</dt>
+	    <dd>John Smith</dd>
+	<dt>Email</dt>
+      <dd>John.smith@stu.ibu.edu.ba</dd>
+    <dt>Location</dt>
+    <dd>Redacted, Bosnia and Herzegovina</dd>
+</dl>
+<hr>
+<h2>Your Location</h2>
+<button onclick="getLocation()">Get My Location</button>
+<p id="location"></p>
+
+<script>
+    function getLocation() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition, showError);
+        } else {
+            document.getElementById("location").innerText = "Geolocation is not supported by this browser.";
+        }
+    }
+
+    function showPosition(position) {
+        document.getElementById("location").innerText = 
+            `Latitude: ${position.coords.latitude}, Longitude: ${position.coords.longitude}`;
+    }
+
+    function showError(error) {
+        switch(error.code) {
+            case error.PERMISSION_DENIED:
+                document.getElementById("location").innerText = "User denied the request for Geolocation.";
+                break;
+            case error.POSITION_UNAVAILABLE:
+                document.getElementById("location").innerText = "Location information is unavailable.";
+                break;
+            case error.TIMEOUT:
+                document.getElementById("location").innerText = "The request to get user location timed out.";
+                break;
+            case error.UNKNOWN_ERROR:
+                document.getElementById("location").innerText = "An unknown error occurred.";
+                break;
+        }
+    }
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<h1>Registration Form</h1>
+<hr>
+<body>
+    <form action="/submit" method="post" id="userForm">
+        <label for="fname">First Name:</label><br>
+        <input type="text" id="fname" name="fname"><br>
+
+        <label for="lname">Last Name:</label><br>
+        <input type="text" id="lname" name="lname"><br>
+
+        <label for="jtitle">Job Title:</label><br>
+        <input type="text" id="jtitle" name="jtitle"><br>
+
+        <input type="submit" name="submit" value="Submit"> 
+    </form>
+    <p id="result"></p> 
+
+<script> 
+document.getElementById("userForm").addEventListener("submit", function(event){ 
+event.preventDefault(); 
+const fname = document.getElementById("fname").value; 
+const lname = document.getElementById("lname").value; 
+const jtitle = document.getElementById("jtitle").value; 
+localStorage.setItem("fname", fname); document.getElementById("result");  
+localStorage.setItem("lname", lname); document.getElementById("result"); 
+localStorage.setItem("jtitle", jtitle); document.getElementById("result").innerText = `Hello, ${fname} ${lname}, ${jtitle}!`; this.reset(); }); 
+</script>
+ 
+
+
+
+</body>
+
+</html>

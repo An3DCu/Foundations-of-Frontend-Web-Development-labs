@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>table, th, td {
+        border: 1px solid black;
+      }
+      #div1 {
+width: 400px;
+height: 220px;
+border: 2px solid black;
+margin-top: 20px;
+margin-bottom: 20px;
+}
+
+      </style>
+<title> Skills </title>
+
+<script>
+    function allowDrop(ev) {
+      ev.preventDefault();
+    }
+    
+    function drag(ev) {
+      ev.dataTransfer.setData("text", ev.target.id);
+    }
+    
+    function drop(ev) {
+      ev.preventDefault();
+      var data = ev.dataTransfer.getData("text");
+      ev.target.appendChild(document.getElementById(data));
+    }
+    </script>
+
+</head>
+<body>
+
+<h1>Drag and drop skills</h1>
+
+<p draggable="true" ondragstart="drag(event)" id="drag1">HTML</p>
+<p draggable="true" ondragstart="drag(event)" id="drag2">CSS</p>
+
+
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+  
+    </div>    
+
+
+</body>
+</html>
