@@ -1,0 +1,229 @@
+body {
+    font-family: 'Times New Roman', sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    background-color: #34495e;
+    border-radius: 8px;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1em;
+    padding: 10px 15px;
+    display: block;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #27ae60;
+}
+
+section {
+    margin: 40px auto;
+    padding: 20px;
+    max-width: 800px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    color: #27ae60;
+    border-bottom: 2px solid #27ae60;
+    padding-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+input[type="number"], select, textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input[type="number"]:focus, select:focus, textarea:focus {
+    border-color: #27ae60;
+}
+
+input[type="submit"] {
+    background-color: #27ae60;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    align-self: flex-start;
+}
+
+input[type="submit"]:hover {
+    background-color: #219150;
+}
+
+h3 {
+    font-size: 1.5em;
+    color: #27ae60; 
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    border-bottom: 2px solid #27ae60; 
+    padding-bottom: 5px;
+    font-weight: bold;
+}
+
+
+.logo {
+    display: inline-block;
+    background-image: url(A_logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+
+.about-section {
+    display: flex;
+    justify-content: flex-end; 
+    align-items: center; 
+    position: relative; 
+}
+
+.about-section::after {
+    content: '';
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-image: url(A_logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: 200px; 
+}
+
+body {
+    padding: 0 10px;
+}
+
+
+@media (min-width: 600px) {
+    header h1 {
+        font-size: 2em;
+    }
+    nav ul {
+        flex-direction: row;
+    }
+    section {
+        margin: 30px auto;
+        padding: 20px;
+        max-width: 90%;
+    }
+}
+
+
+@media (min-width: 1024px) {
+    nav ul {
+        justify-content: space-around;
+        padding: 0 20px;
+    }
+    header h1 {
+        font-size: 2.5em;
+    }
+    section {
+        max-width: 800px;
+    }
+}
+
+
+@media (max-width: 599px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav ul li {
+        margin: 10px 0;
+    }
+    header h1 {
+        font-size: 1.8em;
+    }
+    input[type="submit"] {
+        width: 100%;
+    }
+}
+
+.about-section2 {
+    display: flex;
+    justify-content: flex-end; 
+    align-items: center; 
+    position: relative;
+    top:0px;right:0px;
+}
+
+.about-section2::after {
+    content: '';
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-image: url(A_logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: 200px; 
+}
+
+.about-section3 {
+    display: flex;
+    justify-content: flex-end; 
+    align-items: center; 
+    position: relative;
+    top:0px;right:0px;
+}
+
+.about-section3::after {
+    content: '';
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-image: url(A_logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: 200px; 
+}

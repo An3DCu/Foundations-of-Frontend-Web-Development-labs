@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Comparison</title>
+    <link rel="stylesheet" href="Assignment1.css">
+</head>
+<body>
+    <header>
+        <h1>Loan Calculator & Comparison Tool<span class="logo"></span></h1>
+        <hr>
+        <nav>
+            <ul>
+                <li><a href="main.html">Home</a></li>
+                <li><a href="LoanCalc.html">Loan Calculation</a></li>
+                <li><a href="LoanComp.html">Loan Comparison</a></li>
+                <li><a href="Repay.html">Repayment Strategy</a></li>
+            </ul>
+        </nav>
+        <hr>
+    </header>
+    <section id="loan_comparison">
+        <h2><span class="about-section3"></span><u>Loan Comparison</u></h2>
+        <form action="#" method="post">
+            <label for="loan1_amount">Loan 1 Amount:</label>
+            <input type="number" id="loan1_amount" name="loan1_amount" min="1" required><br>
+<br>
+            <label for="loan1_interest_rate">Loan 1 Annual Interest Rate (%):</label>
+            <input type="number" id="loan1_interest_rate" name="loan1_interest_rate" min="0" required><br>
+            <br>
+
+            <label for="loan1_term">Loan 1 Term (Years):</label>
+            <input type="number" id="loan1_term" name="loan1_term" min="1" required><br>
+<br><br>
+            <label for="loan2_amount">Loan 2 Amount:</label>
+            <input type="number" id="loan2_amount" name="loan2_amount" min="1" required><br>
+            <br>
+
+            <label for="loan2_interest_rate">Loan 2 Annual Interest Rate (%):</label>
+            <input type="number" id="loan2_interest_rate" name="loan2_interest_rate" min="0" required><br>
+            <br>
+
+            <label for="loan2_term">Loan 2 Term (Years):</label>
+            <input type="number" id="loan2_term" name="loan2_term" min="1" required><br>
+            <br>
+
+            <input type="submit" value="Compare Loans">
+        </form>
+    </section>
+</body>
+</html>
