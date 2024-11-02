@@ -16,6 +16,7 @@
                 <li><a href="LoanCalc.html">Loan Calculation</a></li>
                 <li><a href="LoanComp.html">Loan Comparison</a></li>
                 <li><a href="Repay.html">Repayment Strategy</a></li>
+                <li><a href="Additional.html">Additional Resources</a></li>
             </ul>
         </nav>
         <hr>
@@ -23,8 +24,23 @@
     <section id="repayment_strategy">
         <h2><span class="about-section3"></span><u>Repayment Strategy</u></h2>
         <form action="#" method="post">
+            <label for="original_amount">Original Loan Amount:</label>
+            <input type="number" id="original_amount" name="original_amount" min="0"><br>
+            <br>
+
             <label for="current_loan_amount">Current Loan Amount:</label>
             <input type="number" id="current_loan_amount" name="current_loan_amount" min="0" required><br>
+            <br>
+
+            <label for="repayment_frequency">Repayment Frequency:</label>
+            <select id="repayment_frequency" name="repayment_frequency">
+                <option value="monthly">Monthly</option>
+                <option value="bi-weekly">Bi-Weekly</option>
+            </select><br>
+            <br>
+
+            <label for="current_payment">Current Payment Amount:</label>
+            <input type="number" id="current_payment" name="current_payment" min="0"><br>
             <br>
 
             <label for="extra_payment">Extra Payment Amount (optional):</label>
@@ -33,6 +49,48 @@
 
             <input type="submit" value="Get Repayment Strategy">
         </form>
+    </section>
+
+    <section>
+        <h3>Repayment Strategy Results</h3>
+        <div class="table-cont">
+            <table cellspacing="0" cellpadding="10">
+                <thead>
+                    <tr>
+                        <th>Details</th>
+                        <th>Original Plan</th>
+                        <th>With Extra Payments</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Total Loan Amount</td>
+                        <td>N/A</td>
+                        <td>N/A</td>
+                    </tr>
+                    <tr>
+                        <td>Total Interest Paid</td>
+                        <td>N/A</td>
+                        <td>N/A</td>
+                    </tr>
+                    <tr>
+                        <td>Total Number of Payments</td>
+                        <td>N/A</td>
+                        <td>N/A</td>
+                    </tr>
+                    <tr>
+                        <td>Time Saved</td>
+                        <td>N/A</td>
+                        <td>N/A</td>
+                    </tr>
+                    <tr>
+                        <td>Interest Saved</td>
+                        <td>N/A</td>
+                        <td>N/A</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </section>
 </body>
 </html>
