@@ -2,7 +2,7 @@ body {
     font-family: 'Times New Roman', Times, serif;
     background-color: #f4f4f9;
     margin: 0;
-    padding: 0;
+    padding: 0 10px;
 }
 
 header {
@@ -54,10 +54,17 @@ section {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-section h2 {
+section h2, h3 {
     color: #27ae60;
     border-bottom: 2px solid #27ae60;
-    padding-bottom: 20px;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 1.5em;
+    text-transform: uppercase;
 }
 
 form {
@@ -99,17 +106,6 @@ input[type="submit"]:hover {
     background-color: #219150;
 }
 
-h3 {
-    font-size: 1.5em;
-    color: #27ae60; 
-    margin-bottom: 10px;
-    text-transform: uppercase;
-    border-bottom: 2px solid #27ae60; 
-    padding-bottom: 5px;
-    font-weight: bold;
-}
-
-
 .logo {
     display: inline-block;
     background-image: url(A_logo.png);
@@ -121,84 +117,15 @@ h3 {
     vertical-align: middle;
 }
 
-
-.about-section {
+.about-section, .about-section2 {
     display: flex;
-    justify-content: flex-end; 
-    align-items: center; 
-    position: relative; 
-}
-
-.about-section::after {
-    content: '';
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-    background-image: url(A_logo.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    margin-left: 200px; 
-}
-
-body {
-    padding: 0 10px;
-}
-
-
-@media (min-width: 600px) {
-    header h1 {
-        font-size: 2em;
-    }
-    nav ul {
-        flex-direction: row;
-    }
-    section {
-        margin: 30px auto;
-        padding: 20px;
-        max-width: 90%;
-    }
-}
-
-
-@media (min-width: 1024px) {
-    nav ul {
-        justify-content: space-around;
-        padding: 0 20px;
-    }
-    header h1 {
-        font-size: 2.5em;
-    }
-    section {
-        max-width: 800px;
-    }
-}
-
-
-@media (max-width: 599px) {
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-    nav ul li {
-        margin: 10px 0;
-    }
-    header h1 {
-        font-size: 1.8em;
-    }
-    input[type="submit"] {
-        width: 100%;
-    }
-}
-
-.about-section2 {
-    display: flex;
-    justify-content: flex-end; 
-    align-items: center; 
+    justify-content: space-between;
+    align-items: center;
     position: relative;
-    top:0px;right:0px;
+    flex-wrap: nowrap;
 }
 
-.about-section2::after {
+.about-section::after, .about-section2::after {
     content: '';
     display: inline-block;
     width: 40px;
@@ -206,28 +133,22 @@ body {
     background-image: url(A_logo.png);
     background-size: contain;
     background-repeat: no-repeat;
-    margin-left: 200px; 
+    margin-left: 200px;
+    min-width: 40px;
+    max-width: 100%;
+    flex-shrink: 0;
 }
 
-.about-section3 {
-    display: flex;
-    justify-content: flex-end; 
-    align-items: center; 
-    position: relative;
-    top:0px;right:0px;
+.about-section p {
+    flex-grow: 1;
+    margin-left: 10px;
+    min-width: 0;
 }
 
-.about-section3::after {
-    content: '';
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-    background-image: url(A_logo.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    margin-left: 200px; 
+.table-cont {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
 }
-
 
 table {
     width: 100%;
@@ -250,18 +171,54 @@ tr:nth-child(even) {
     background-color: #f2f2f2;
 }
 
-.table-cont {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
+@media (min-width: 600px) {
+    header h1 {
+        font-size: 2em;
+    }
+    nav ul {
+        flex-direction: row;
+    }
+    section {
+        margin: 30px auto;
+        max-width: 90%;
+    }
 }
 
-@media (max-width: 768px) {
-    th, td {
-        padding: 8px;
-        font-size: 14px; 
+@media (min-width: 1024px) {
+    nav ul {
+        justify-content: space-around;
+        padding: 0 20px;
     }
+    header h1 {
+        font-size: 2.5em;
+    }
+    section {
+        max-width: 800px;
+    }
+}
 
-    table {
-        font-size: 12px;
+@media (max-width: 599px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav ul li {
+        margin: 10px 0;
+    }
+    header h1 {
+        font-size: 1.8em;
+    }
+    input[type="submit"] {
+        width: 100%;
+    }
+}
+
+@media (max-width: 400px) {
+    .about-section, .about-section2 {
+        flex-direction: row;
+        align-items: center;
+    }
+    .about-section::after, .about-section2::after {
+        margin: 0;
     }
 }
