@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV Creator Tool - Registration</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .navbar-custom {
+      background-color: #007bff; 
+      padding: 0.5rem 1rem; 
+    }
+
+    .navbar-custom .nav-link,
+    .navbar-custom .navbar-brand {
+      color: #ffffff !important;
+      font-weight: 500;
+    }
+
+    .navbar-custom .navbar-buttons {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem; 
+    }
+
+    .btn-outline-primary {
+      color: white !important;
+      border-color: white !important;
+    }
+    .btn-outline-primary:hover {
+      background-color: white !important;
+      color: #007bff !important;
+    }
+
+    .progress-bar-striped-custom {
+      background-color: #ffcc00;
+    }
+
+    footer {
+      background-color: #333;
+      color: #ffffff;
+      padding: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-custom">
+  <a class="navbar-brand" href="#">CV Creator Tool</a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav me-auto">
+      <li class="nav-item"><a class="nav-link" href="Home.html">Home</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">Features</a></li>
+      <li class="nav-item"><a class="nav-link" href="Pricing.html">Pricing</a></li>
+      <li class="nav-item"><a class="nav-link" href="#Contact">Contact Us</a></li>
+    </ul>
+    <div class="navbar-buttons ms-auto">
+      <button class="btn btn-outline-primary">Sign In</button>
+    </div>
+  </div>
+</nav>
+
+<div class="container my-5">
+  <div class="card mx-auto" style="max-width: 500px;">
+    <div class="card-header bg-primary text-white text-center">
+      <h4><strong>User Registration</strong></h4>
+    </div>
+    <div class="card-body">
+      <form action="/submit" method="post" class="was-validated">
+        <div class="mb-3 text-start">
+          <label for="name" class="form-label">Name:</label>
+          <input type="text" class="form-control" id="name" name="name" required>
+          <div class="valid-feedback">Looks good!</div>
+          <div class="invalid-feedback">Please enter your name.</div>
+        </div>
+        <div class="mb-3 text-start">
+          <label for="uname" class="form-label">Username:</label>
+          <input type="text" class="form-control" id="uname" name="uname" required>
+          <div class="valid-feedback">Looks good!</div>
+          <div class="invalid-feedback">Please enter a username.</div>
+        </div>
+        <div class="mb-3 text-start">
+          <label for="email" class="form-label">Email:</label>
+          <input type="email" class="form-control" id="email" name="email" required>
+          <div class="valid-feedback">Looks good!</div>
+          <div class="invalid-feedback">Please enter a valid email address.</div>
+        </div>
+        <div class="mb-3 text-start">
+          <label for="pass" class="form-label">Password:</label>
+          <input type="password" class="form-control" id="pass" name="pass" required>
+          <div class="valid-feedback">Looks good!</div>
+          <div class="invalid-feedback">Please enter a password.</div>
+        </div>
+        <div class="mb-3 text-start">
+          <label for="age" class="form-label">Age:</label>
+          <input type="number" class="form-control" id="age" name="age" min="0" required>
+          <div class="valid-feedback">Looks good!</div>
+          <div class="invalid-feedback">Please provide your age.</div>
+        </div>
+        <div class="mb-3 text-start">
+          <label for="phone" class="form-label">Phone Number:</label>
+          <input type="tel" class="form-control" id="phone" name="phone" required>
+          <div class="valid-feedback">Looks good!</div>
+          <div class="invalid-feedback">Please enter your phone number.</div>
+        </div>
+        <div class="mb-3 text-start">
+          <label for="gender" class="form-label">Gender:</label>
+          <select name="gender" id="gender" class="form-select" required>
+            <option value="" disabled selected>Select your gender</option>
+            <option value="female">Female</option>
+            <option value="male">Male</option>
+          </select>
+          <div class="valid-feedback">Looks good!</div>
+          <div class="invalid-feedback">Please select your gender.</div>
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="my-4">
+    <div class="progress">
+      <div class="progress-bar progress-bar-striped progress-bar-striped-custom" role="progressbar" style="width: 25%;">25%</div>
+    </div>
+  </div>
+</div>
+
+<footer class="text-center footer-custom" id="Contact">
+  <div class="container">
+    <p>© 2024 CV Creator Tool. All rights reserved.</p>
+    <div>
+      <a href="#" class="text-white me-3">Privacy Policy</a>
+      <a href="#" class="text-white me-3">Terms of Service</a>
+      <a href="#" class="text-white">Contact Us</a>
+    </div>
+    <div class="mt-3">
+      <p><strong>Contact:</strong> +38761234567</p>
+      <p><strong>Email:</strong> something@gmail.com</p>
+      <p><strong>Work Hours:</strong> 8:00 - 16:00 (Workdays only)</p>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
