@@ -55,7 +55,6 @@
             margin-top: auto;
         }
 
-
         .custom-bootstrap .modal-backdrop {
             background-color: rgba(0, 0, 0, 0.5);
             backdrop-filter: blur(4px);
@@ -126,6 +125,7 @@
                 <li><a href="LoanComp.html">Loan Comparison</a></li>
                 <li><a href="Repay.html">Repayment Strategy</a></li>
                 <li><a href="Additional.html">Additional Resources</a></li>
+                <li><a href="FAQ.html">FAQ</a></li>
             </ul>
         </nav>
         <hr>
@@ -138,28 +138,28 @@
 
                 <div class="carousel-item active">
                     <button type="button" class="btn btn-light card-btn w-100" data-bs-toggle="modal" data-bs-target="#currencyConverterModal">
-                        <img src="currency_button.svg" alt="Currency Converter" class="card-image">
+                        <img src="currency_button.svg" alt="Currency Converter.svg" class="card-image">
                     </button>
                 </div>
 
 
                 <div class="carousel-item">
                     <button type="button" class="btn btn-light card-btn w-100" data-bs-toggle="modal" data-bs-target="#emailModal">
-                        <img src="email_button.svg" alt="Email" class="card-image">
+                        <img src="email_button.svg" alt="Email.svg" class="card-image">
                     </button>
                 </div>
 
 
                 <div class="carousel-item">
                     <button type="button" class="btn btn-light card-btn w-100" data-bs-toggle="modal" data-bs-target="#newsModal">
-                        <img src="newspaper_button_adjusted.svg" alt="News" class="card-image">
+                        <img src="newspaper_button_adjusted.svg" alt="News.svg" class="card-image">
                     </button>
                 </div>
 
 
                 <div class="carousel-item">
                     <button type="button" class="btn btn-light card-btn w-100" data-bs-toggle="modal" data-bs-target="#videoModal">
-                        <img src="video_button.svg" alt="Video" class="card-image">
+                        <img src="video_button.svg" alt="Video.svg" class="card-image">
                     </button>
                 </div>
             </div>
@@ -168,17 +168,27 @@
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
             </button>
+
             <button class="carousel-control-next" type="button" data-bs-target="#buttonCarousel" data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
 
+        <div class="progress my-4 w-100" style="height: 25px; border-radius: 12px; overflow: hidden;">
+            <div class="progress-bar" role="progressbar" 
+                style="width: 75%; background-color: #27ae60; font-weight: bold; color: white;" 
+                aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                75%
+            </div>
+        </div>
+        
+ 
         <div class="modal fade" id="currencyConverterModal" tabindex="-1" aria-labelledby="currencyConverterLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="currencyConverterLabel">Currency Converter</h5>
+                        <h5 class="modal-title" id="currencyConverterLabel"><b><u>Currency Converter</u></b></h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
@@ -193,7 +203,7 @@
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="emailModalLabel">Email</h5>
+                        <h5 class="modal-title" id="emailModalLabel"><b><u>Email</u></b></h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
@@ -216,11 +226,11 @@
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="newsModalLabel">News</h5>
+                        <h5 class="modal-title" id="newsModalLabel"><b><u>Financial News</u></b></h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <p>The latest financial news at <a href="https://www.bloomberg.com/markets" target="_blank">Bloomberg Markets</a>.</p>
+                        <p>The latest financial news at <a href="https://www.bloomberg.com/markets" target="_blank">Bloomberg Markets</a> and <a href="https://www.reuters.com/business/finance/" target="_blank">Reuters</a>.</p>
                     </div>
                 </div>
             </div>
@@ -231,11 +241,15 @@
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="videoModalLabel">Video Placeholder</h5>
+                        <h5 class="modal-title" id="videoModalLabel"><b><u>Amortization—by TheOrganicChemistryTutor</u></b></h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <p>Placeholder for a video.</p>
+                        <video controls width="100%" height="auto">
+                            <source src="Amortization Loan Formula.mp4" alt="AmortizationVid.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <p>Note: This video will continue playing in the background of the current webpage unless paused within this modal.</p>
                     </div>
                 </div>
             </div>

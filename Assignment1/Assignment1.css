@@ -121,6 +121,7 @@ input[type="submit"]:hover {
 .logo {
     display: inline-block;
     background-image: url(A_logo.png);
+    content: attr(alt);
     background-size: contain;
     background-repeat: no-repeat;
     width: 40px;
@@ -128,6 +129,9 @@ input[type="submit"]:hover {
     margin-left: 10px;
     vertical-align: middle;
 }
+
+
+
 
 .about-section, .about-section2 {
     display: flex;

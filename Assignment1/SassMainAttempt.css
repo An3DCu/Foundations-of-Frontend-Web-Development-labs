@@ -31,7 +31,7 @@ header h1 .logo {
 
 nav ul {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   list-style: none;
   padding: 0;
   margin: 20px 0;
