@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Assignment Plan: Loan App</title>
     <link rel="stylesheet" href="SassMainAttempt.css">
+
 </head>
 <body>
-    <header>
+    <header style="z-index: 1;">
         <h1><i>Loan Insights</i><span class="logo"></span></h1>
         <hr>
         <nav>
@@ -23,24 +24,34 @@
     </header>
 
     <div class="main-content">
-    <section id="about">
-       <h2><span class="about-section"><u>About This App</u></span></h2>
-        <p>I plan to design this app to help it's users understand their financial situation regarding their active or potential loans.<br><br>
-            In order to achieve this, I will be giving them the means to:
-            <br>- Calculate their payments in advance<br> 
-            - To be able to compare their exisitng/planned loans,<br>
-         - To provide a suggestion on how to most effectively repay those loans. </p>
-    </section>
+        <div class="floating-card">
+            <h3>Additional card for more information</h3>
+            <p>Placeholder text for some content.</p>
+        </div>
 
-<section>
-         <h2><span class="about-section">Disclaimer: </span></h2>
-        <p>No personal data is collected or stored. All information provided is solely for calculation purposes and remains confidential during the session.
-        </p>
-    </section>
+        <div class="content-column">
+            <section id="about">
+                <h2><span class="about-section"><u>About This App</u></span></h2>
+                <p>
+                    This app is designed to help users understand their financial situation regarding active or potential loans.<br><br>
+                    Features include:<br>
+                    - Calculating payments in advance<br>
+                    - Comparing existing/planned loans<br>
+                    - Suggestions for effective repayment strategies
+                </p>
+            </section>
+
+            <section id="disclaimer" style="z-index: 1;">
+                <h2><span class="about-section">Disclaimer:</span></h2>
+                <p>
+                    No personal data is collected or stored. All information provided is solely for calculation purposes and remains confidential during the session.
+                </p>
+            </section>
+        </div>
     </div>
 
     <footer class="footer">
-        <p>Course: IBU 061 - Foundations of Web Development | Anad Curukovic </p>
+        <p>Course: IBU 061 - Foundations of Web Development | Anad Curukovic</p>
     </footer>
 </body>
 </html>

@@ -18,6 +18,7 @@ header {
     text-align: center;
     padding: 10px 0;
     font-size: 14px;
+    margin-top: auto;
 }
 
 
@@ -234,11 +235,14 @@ tr:nth-child(even) {
     }
 }
 
+
+
+
 .main-content {
     position: relative; 
     padding: 0px; 
-    z-index: 0; 
-    overflow: hidden; 
+    overflow: hidden;
+    padding-bottom: 60px;
 }
 .main-content::before {
     content: '';
@@ -255,4 +259,3 @@ tr:nth-child(even) {
     z-index: -1;
     pointer-events: none;
 }
- 

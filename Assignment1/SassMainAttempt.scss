@@ -11,6 +11,9 @@ body {
   background-color: $background-color;
   margin: 0;
   padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 header {
@@ -18,21 +21,21 @@ header {
   color: $text-color;
   text-align: center;
   padding: 20px;
-}
 
-header h1 {
-  margin: 0;
-  font-size: 2.5em;
+  h1 {
+    margin: 0;
+    font-size: 2.5em;
 
-  .logo {
-    display: inline-block;
-    background-image: $logo-url;
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 40px;
-    height: 40px;
-    margin-left: 10px;
-    vertical-align: middle;
+    .logo {
+      display: inline-block;
+      background-image: $logo-url;
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 40px;
+      height: 40px;
+      margin-left: 10px;
+      vertical-align: middle;
+    }
   }
 }
 
@@ -65,10 +68,12 @@ nav ul {
 }
 
 .main-content {
+  display: grid;
+  grid-template-columns: 300px 1fr; 
+  grid-gap: 60px;
+  padding: 20px;
   position: relative;
-  padding: 0;
-  z-index: 0;
-  overflow: hidden;
+  flex: 1;
 
   &::before {
     content: '';
@@ -87,39 +92,67 @@ nav ul {
   }
 }
 
-section {
-  margin: 40px auto;
+.floating-card {
+  grid-column: 1;
+  width: 100%;
   padding: 20px;
-  max-width: 800px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  box-sizing: border-box;
+
+
+  h3 {
+    margin-top: 0;
+  }
+
+  p {
+    font-size: 0.9em;
+    line-height: 1.4;
+  }
+}
+
+.content-column {
+  grid-column: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+section {
   background-color: #fff;
   border-radius: 8px;
+  padding: 20px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
 
   h2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     color: $primary-color;
     border-bottom: 2px solid $primary-color;
     padding-bottom: 5px;
     margin-bottom: 10px;
     font-weight: bold;
+
+    span.about-section {
+      display: inline-block;
+    }
+
+
+    &::after {
+      content: '';
+      width: 40px;
+      height: 40px;
+      background-image: $logo-url;
+      background-size: contain;
+      background-repeat: no-repeat;
+      margin-left: 10px;
+    }
   }
 }
 
-.about-section {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  &::after {
-    content: '';
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-    background-image: $logo-url;
-    background-size: contain;
-    background-repeat: no-repeat;
-    margin-left: 200px;
-  }
-}
 
 .footer {
   background-color: $header-footer-bg;
@@ -127,56 +160,59 @@ section {
   text-align: center;
   padding: 10px 0;
   font-size: 14px;
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
 }
 
-@media (min-width: 600px) {
-  header h1 {
-      font-size: 2em;
+@media (max-width: 1024px) {
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
   }
-  nav ul {
-      flex-direction: row;
-  }
-  section {
-      margin: 30px auto;
-      max-width: 90%;
-  }
-}
 
-@media (min-width: 1024px) {
-  nav ul {
-      justify-content: space-around;
-      padding: 0 20px;
+  .floating-card {
+    margin-bottom: 20px;
+    height:fit-content;
   }
-  header h1 {
-      font-size: 2.5em;
-  }
-  section {
-      max-width: 800px;
-  }
-}
 
-@media (max-width: 599px) {
+  .content-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
   nav ul {
-      flex-direction: column;
-      align-items: center;
-  }
-  nav ul li {
-      margin: 10px 0;
-  }
-  header h1 {
-      font-size: 1.8em;
-  }
-  input[type="submit"] {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 20px;
+    gap: 10px;
+
+    li {
+      margin: 5px 0;
+    }
+
+    a {
       width: 100%;
+      text-align: left;
+    }
   }
 }
 
-@media (max-width: 400px) {
-  .about-section, .about-section2 {
-      flex-direction: row;
-      align-items: center;
+@media (max-width: 768px) {
+  nav ul {
+    align-items: center;
+    padding: 0;
   }
-  .about-section::after, .about-section2::after {
-      margin: 0;
+
+  .floating-card {
+    margin-top: 10px; 
+  }
+}
+
+@media (min-width: 1025px) {
+  .floating-card {
+   height:fit-content;
   }
 }
