@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Insights</title>
+    <link rel="stylesheet" href="Assignment1.css">
+    <style>
+        @media (min-width: 2800px) { 
+    .footer {
+        position: fixed; 
+        bottom: 0;
+        left: 0;
+        width: 100%; 
+    }
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1><i>Loan Insights</i><span class="logo"></span></h1>
+        <hr>
+        <nav>
+            <ul>
+                <li><a href="main.html">Home</a></li>
+                <li><a href="LoanCalc.html">Loan Calculation</a></li>
+                <li><a href="LoanComp.html">Loan Comparison</a></li>
+                <li><a href="Repay.html">Repayment Strategy</a></li>
+                <li><a href="Additional.html">Additional Resources</a></li>
+                <li><a href="FAQ.html">FAQ</a></li>
+            </ul>
+        </nav>
+        <hr>
+    </header>
+
+    <div class="main-content">
+
+    <section id="repayment_strategy">
+        <h2><span class="about-section2"><u>Repayment Strategy</u></span></h2>
+        <form action="https://jsonplaceholder.typicode.com/posts" method="post" target="_blank">
+            <label for="original_amount">Original Loan Amount:</label>
+            <input type="number" id="original_amount" name="original_amount" min="0" required><br>
+            <br>
+
+            <label for="current_loan_amount">Current Loan Amount:</label>
+            <input type="number" id="current_loan_amount" name="current_loan_amount" min="0" required><br>
+            <br>
+
+            <label for="repayment_frequency">Repayment Frequency:</label>
+            <select id="repayment_frequency" name="repayment_frequency" required>
+                <option value="monthly">Monthly</option>
+                <option value="bi-weekly">Bi-Weekly</option>
+            </select><br>
+            <br>
+
+            <label for="current_payment">Current Payment Amount:</label>
+            <input type="number" id="current_payment" name="current_payment" min="0" required><br>
+            <br>
+
+            <label for="extra_payment">Extra Payment Amount (optional):</label>
+            <input type="number" id="extra_payment" name="extra_payment" min="0" required><br>
+            <br>
+
+            <input type="submit" value="Get Repayment Strategy">
+        </form>
+    </section>
+
+    <section>
+        <h3><span class="about-section2">Results: </span></h3>
+        <div class="table-cont">
+            <table cellspacing="0" cellpadding="10">
+                <thead>
+                    <tr>
+                        <th>Details</th>
+                        <th>Original Plan</th>
+                        <th>With Extra Payments</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Total Loan Amount</td>
+                        <td>N/A</td>
+                        <td>N/A</td>
+                    </tr>
+                    <tr>
+                        <td>Total Interest Paid</td>
+                        <td>N/A</td>
+                        <td>N/A</td>
+                    </tr>
+                    <tr>
+                        <td>Total Number of Payments</td>
+                        <td>N/A</td>
+                        <td>N/A</td>
+                    </tr>
+                    <tr>
+                        <td>Time Saved</td>
+                        <td>N/A</td>
+                        <td>N/A</td>
+                    </tr>
+                    <tr>
+                        <td>Interest Saved</td>
+                        <td>N/A</td>
+                        <td>N/A</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    </div>
+
+    <footer class="footer">
+        <p>Course: IBU 061 - Foundations of Web Development | Anad Curukovic </p>
+    </footer>
+</body>
+</html>

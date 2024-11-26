@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Insights</title>
+    <link rel="stylesheet" href="Assignment1.css">
+    <style>
+        @media (min-width: 2200px) { 
+    .footer {
+        position: fixed; 
+        bottom: 0;
+        left: 0;
+        width: 100%; 
+    }
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1><i>Loan Insights</i><span class="logo"></span></h1>
+        <hr>
+        <nav>
+            <ul>
+                <li><a href="main.html">Home</a></li>
+                <li><a href="LoanCalc.html">Loan Calculation</a></li>
+                <li><a href="LoanComp.html">Loan Comparison</a></li>
+                <li><a href="Repay.html">Repayment Strategy</a></li>
+                <li><a href="Additional.html">Additional Resources</a></li>
+                <li><a href="FAQ.html">FAQ</a></li>
+            </ul>
+        </nav>
+        <hr>
+    </header>
+
+    <div class="main-content">
+
+    <section id="loan_calculation">
+        <h2><u><span class="about-section2">Loan Calculation</span></u></h2>
+        <form action="https://jsonplaceholder.typicode.com/posts" method="POST" target="_blank">
+            <label for="loan_amount">Loan Amount:</label>
+            <input type="number" id="loan_amount" name="loan_amount" min="1" required><br>
+            <br>
+
+            <label for="interest_rate">Annual Interest Rate (%):</label>
+            <input type="number" id="interest_rate" name="interest_rate" min="0" required><br>
+            <br>
+
+            <label for="loan_term">Loan Term (Years):</label>
+            <input type="number" id="loan_term" name="loan_term" min="1" required><br>
+            <br>
+
+            <label for="repayment_frequency">Repayment Frequency:</label>
+            <select id="repayment_frequency" name="repayment_frequency">
+                <option value="monthly">Monthly</option>
+                <option value="bi-weekly">Bi-Weekly</option>
+            </select><br>
+            <br>
+
+            <input type="submit" value="Calculate">
+        </form>
+    </section>
+
+    <section>
+        <h3><span class="about-section2">Results: </span></h3>
+
+        <div class="table-cont">
+        <table cellspacing="0" cellpadding="10">
+            <thead>
+                <tr>
+                    <th>Payment Number</th>
+                    <th>Payment Amount</th>
+                    <th>Principal Paid</th>
+                    <th>Interest Paid</th>
+                    <th>Remaining Balance</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+
+    </section>
+
+    </section>
+
+    </div>
+
+    <footer class="footer">
+        <p>Course: IBU 061 - Foundations of Web Development | Anad Curukovic </p>
+    </footer>
+</body>
+</html>
