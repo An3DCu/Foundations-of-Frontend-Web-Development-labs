@@ -20,7 +20,7 @@ header h1 {
 }
 header h1 .logo {
   display: inline-block;
-  background-image: url("A_logo.png");
+  background-image: url("../Images/A_logo.png");
   background-size: contain;
   background-repeat: no-repeat;
   width: 40px;
@@ -69,7 +69,7 @@ nav ul li a:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("A logo.svg");
+  background-image: url("../Images/A logo.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -126,7 +126,7 @@ section h2::after {
   content: "";
   width: 40px;
   height: 40px;
-  background-image: url("A_logo.png");
+  background-image: url("../Images/A_logo.png");
   background-size: contain;
   background-repeat: no-repeat;
   margin-left: 10px;
