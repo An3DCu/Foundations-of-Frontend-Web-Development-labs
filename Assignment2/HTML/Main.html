@@ -108,6 +108,7 @@ body.dark-theme {
                     <li><strong>Versatility:</strong> Supports different loan types, including personal, car, and mortgage loans.</li>
                     <li><strong>Customization:</strong> Allows you to tailor repayment strategies based on your needs.</li>
                 </ul>
+                <button id="viewMoreBtn" class="theme-button" style="margin-top: 15px;">View More</button>
             </section>
 
             <section id="disclaimer" style="z-index: 1;">
@@ -126,5 +127,17 @@ body.dark-theme {
 
     <script src="JS/ThemeSwitcher.js"></script>
     <script src="JS/LoadDisclaimer.js"></script>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const viewMoreBtn = document.getElementById("viewMoreBtn");
+        
+            viewMoreBtn.addEventListener("click", function () {
+                window.location.href = "details.html";
+            });
+        });
+        </script>
+        
+
 </body>
 </html>
