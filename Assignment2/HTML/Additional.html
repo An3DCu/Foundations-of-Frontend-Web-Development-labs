@@ -375,6 +375,64 @@
         });
     </script>
     
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+    const newsModal = document.getElementById("newsModal");
+    const modalBody = newsModal.querySelector(".modal-body");
+
+    function fetchCryptoPrices() {
+        const endpoint = "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,cardano&vs_currencies=usd";
+
+        const loadingMessage = document.createElement("p");
+        loadingMessage.id = "crypto-loading";
+        loadingMessage.textContent = "Loading cryptocurrency prices...";
+        modalBody.appendChild(loadingMessage);
+
+        fetch(endpoint)
+            .then(function (response) {
+                if (!response.ok) {
+                    throw new Error("Failed to fetch prices: " + response.status);
+                }
+                return response.json();
+            })
+            .then(function (data) {
+                const loading = document.getElementById("crypto-loading");
+                if (loading) {
+                    loading.remove();
+                }
+
+                const cryptoContainer = document.createElement("div");
+                cryptoContainer.id = "crypto-prices";
+                cryptoContainer.innerHTML = `
+                    <h6>Cryptocurrency Prices (USD)</h6>
+                    <ul>
+                        <li><strong>Bitcoin (BTC):</strong> $${data.bitcoin.usd}</li>
+                        <li><strong>Ethereum (ETH):</strong> $${data.ethereum.usd}</li>
+                        <li><strong>Cardano (ADA):</strong> $${data.cardano.usd}</li>
+                    </ul>
+                `;
+                modalBody.appendChild(cryptoContainer);
+            })
+            .catch(function (error) {
+                const loading = document.getElementById("crypto-loading");
+                if (loading) {
+                    loading.remove();
+                }
+
+                const errorMessage = document.createElement("p");
+                errorMessage.style.color = "red";
+                errorMessage.textContent = "Error loading prices: " + error.message;
+                modalBody.appendChild(errorMessage);
+            });
+    }
+
+    newsModal.addEventListener("show.bs.modal", function () {
+        if (!document.getElementById("crypto-prices")) {
+            fetchCryptoPrices();
+        }
+    });
+});
+    </script>
 
 </body>
 </html>
