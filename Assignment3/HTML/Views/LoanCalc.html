@@ -1,0 +1,59 @@
+   <div class="main-content">
+
+    <section id="loan_calculation">
+        <h2><u><span class="about-section2">Loan Calculation</span></u></h2>
+        <form action="https://jsonplaceholder.typicode.com/posts" method="POST" target="_blank">
+            <label for="loan_amount">Loan Amount:</label>
+            <input type="number" id="loan_amount" name="loan_amount" min="1" required><br>
+            <br>
+
+            <label for="interest_rate">Annual Interest Rate (%):</label>
+            <input type="number" id="interest_rate" name="interest_rate" min="0" required><br>
+            <br>
+
+            <label for="loan_term">Loan Term (Years):</label>
+            <input type="number" id="loan_term" name="loan_term" min="1" required><br>
+            <br>
+
+            <label for="repayment_frequency">Repayment Frequency:</label>
+            <select id="repayment_frequency" name="repayment_frequency">
+                <option value="monthly">Monthly</option>
+                <option value="bi-weekly">Bi-Weekly</option>
+            </select><br>
+            <br>
+
+            <input type="submit" value="Calculate">
+        </form>
+    </section>
+
+    <section>
+        <h3><span class="about-section2">Results: </span></h3>
+
+        <div class="table-cont">
+        <table cellspacing="0" cellpadding="10">
+            <thead>
+                <tr>
+                    <th>Payment Number</th>
+                    <th>Payment Amount</th>
+                    <th>Principal Paid</th>
+                    <th>Interest Paid</th>
+                    <th>Remaining Balance</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+
+    </section>
+
+    </section>
+
+    </div>
